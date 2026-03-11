@@ -303,26 +303,21 @@
     .stat-num { font-size: 40px; font-weight: 900; color: #fff; line-height: 1; margin-bottom: 8px; }
     .stat-label { font-size: 14px; color: rgba(255,255,255,0.7); }
 
-    /* ── TESTIMONIALS ── */
-    .testimonials-grid {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* ── EARLY ADOPTERS ── */
+    .early-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 24px;
     }
-    .testi-card {
+    .early-card {
       background: #fff; border: 1px solid var(--border);
       border-radius: var(--radius); padding: 32px;
+      display: flex; flex-direction: column; gap: 12px;
     }
-    .stars { color: #f59e0b; font-size: 18px; margin-bottom: 16px; }
-    .testi-text { font-size: 16px; color: var(--text); line-height: 1.6; margin-bottom: 24px; font-style: italic; }
-    .testi-author { display: flex; align-items: center; gap: 12px; }
-    .testi-avatar {
-      width: 44px; height: 44px; border-radius: 50%;
-      background: var(--blue-light); color: var(--blue);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 18px; font-weight: 700;
-    }
-    .testi-name { font-size: 15px; font-weight: 700; }
-    .testi-role { font-size: 13px; color: var(--muted); }
+    .early-icon { font-size: 32px; }
+    .early-card h3 { font-size: 18px; font-weight: 700; }
+    .early-card p { font-size: 15px; color: var(--muted); line-height: 1.6; }
+    .early-cta-wrap { text-align: center; margin-top: 48px; }
+    .early-cta-wrap p { font-size: 16px; color: var(--muted); margin-bottom: 20px; }
 
     /* ── CTA BOTTOM ── */
     .cta-section {
@@ -560,46 +555,32 @@
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
+<!-- EARLY ADOPTERS -->
 <section>
   <div class="section-inner">
-    <div class="section-label">Stimmen</div>
-    <h2 class="section-title">Was andere sagen.</h2>
-    <p class="section-sub">Freelancer und KMU aus der ganzen Schweiz nutzen AlpBill täglich.</p>
-    <div class="testimonials-grid">
-      <div class="testi-card">
-        <div class="stars">★★★★★</div>
-        <p class="testi-text">„Endlich ein Tool, das die Schweizer MWST richtig macht. Ich spare damit locker 2 Stunden pro Woche."</p>
-        <div class="testi-author">
-          <div class="testi-avatar">M</div>
-          <div>
-            <div class="testi-name">Markus R.</div>
-            <div class="testi-role">Freelance Developer, Zürich</div>
-          </div>
-        </div>
+    <div class="section-label">Beta Community</div>
+    <h2 class="section-title">Sei einer der Ersten.</h2>
+    <p class="section-sub">AlpBill ist in der öffentlichen Beta. Das bedeutet: kostenloser Zugang, direkter Draht zum Entwickler — und du prägst das Produkt mit.</p>
+    <div class="early-grid">
+      <div class="early-card">
+        <div class="early-icon">🆓</div>
+        <h3>Jetzt kostenlos</h3>
+        <p>Während der Beta ist AlpBill vollständig kostenlos. Kein Abo, keine Kreditkarte, kein Ablaufdatum.</p>
       </div>
-      <div class="testi-card">
-        <div class="stars">★★★★★</div>
-        <p class="testi-text">„Ich schreibe meine Rechnungen jetzt in 3 Minuten statt 30. AlpBill ist genau das, was ich gesucht habe."</p>
-        <div class="testi-author">
-          <div class="testi-avatar">S</div>
-          <div>
-            <div class="testi-name">Sandra K.</div>
-            <div class="testi-role">Grafikdesignerin, Bern</div>
-          </div>
-        </div>
+      <div class="early-card">
+        <div class="early-icon">💬</div>
+        <h3>Dein Feedback zählt</h3>
+        <p>Als Early Adopter hast du direkten Einfluss auf Features und Prioritäten. Schreib uns — wir antworten persönlich.</p>
       </div>
-      <div class="testi-card">
-        <div class="stars">★★★★★</div>
-        <p class="testi-text">„Einfach, sauber, korrekt. Die QR-Rechnung funktioniert sofort — meine Kunden sind begeistert."</p>
-        <div class="testi-author">
-          <div class="testi-avatar">T</div>
-          <div>
-            <div class="testi-name">Thomas B.</div>
-            <div class="testi-role">Unternehmensberater, St. Gallen</div>
-          </div>
-        </div>
+      <div class="early-card">
+        <div class="early-icon">🚀</div>
+        <h3>Früh dabei sein</h3>
+        <p>Wer jetzt einsteigt, profitiert langfristig. Beta-Nutzer erhalten beim Launch bevorzugten Zugang zu neuen Features.</p>
       </div>
+    </div>
+    <div class="early-cta-wrap">
+      <p>Feedback, Fragen oder eine Idee? Schreib uns direkt:</p>
+      <a href="mailto:hallo@alpbill.ch" class="btn-primary" style="display:inline-block;">✉️ hallo@alpbill.ch</a>
     </div>
   </div>
 </section>
