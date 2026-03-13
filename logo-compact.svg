@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 56" width="320" height="56">
+  <defs>
+    <linearGradient id="bgGc" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#1a4fd0"/>
+    </linearGradient>
+  </defs>
+  <!-- Icon (56×56) -->
+  <rect x="0" y="0" width="56" height="56" rx="12" fill="url(#bgGc)"/>
+  <path d="M 5 37  L 23 12  L 31 22  L 39 16  L 52 37  Z" fill="white" fill-opacity="0.95"/>
+  <path d="M 23 12  L 18.5 18  L 27.5 18  Z" fill="white" fill-opacity="0.25"/>
+  <path d="M 39 16  L 35.5 21  L 42.5 21  Z" fill="white" fill-opacity="0.25"/>
+  <rect x="12" y="40" width="32" height="3" rx="1.5" fill="white" fill-opacity="0.92"/>
+  <rect x="12" y="45.5" width="25" height="3" rx="1.5" fill="white" fill-opacity="0.92"/>
+  <rect x="12" y="51" width="18" height="3" rx="1.5" fill="white" fill-opacity="0.92"/>
+  <!-- Wordmark -->
+  <text font-family="Inter, -apple-system, Helvetica Neue, sans-serif"
+        font-weight="800" font-size="30" dominant-baseline="middle">
+    <tspan x="70" y="29" fill="#111827">Alp</tspan><tspan fill="#2563eb">Bill</tspan>
+  </text>
+</svg>

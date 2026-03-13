@@ -5,6 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AlpBill – Schweizer Rechnungssoftware für Freelancer & KMU</title>
   <meta name="description" content="Professionelle Schweizer Rechnungen erstellen. MWST-konform, QR-Rechnung, PDF-Export. Für Freelancer und kleine Unternehmen." />
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+  <link rel="apple-touch-icon" sizes="192x192" href="/icon-192.png" />
+  <link rel="apple-touch-icon" sizes="512x512" href="/icon-512.png" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="AlpBill – Schweizer Rechnungssoftware" />
+  <meta property="og:description" content="Professionelle Rechnungen erstellen. MWST-konform, QR-Rechnung, PDF-Export." />
+  <meta property="og:image" content="https://alpbill.ch/og-banner.png" />
+  <meta property="og:url" content="https://alpbill.ch" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://alpbill.ch/og-banner.png" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -346,9 +363,71 @@
 
     /* ── RESPONSIVE ── */
     @media (max-width: 768px) {
+      /* Nav */
       .nav-links { display: none; }
-      .swiss-inner { grid-template-columns: 1fr; gap: 48px; }
-      .swiss-stats { grid-template-columns: 1fr 1fr; }
+      .nav-cta { padding: 9px 16px; font-size: 13px; }
+
+      /* Hero */
+      .hero { padding: 100px 20px 60px; }
+      .hero h1 { font-size: 36px; letter-spacing: -1px; }
+      .hero p { font-size: 16px; margin-bottom: 32px; }
+      .hero-actions { flex-direction: column; align-items: center; gap: 12px; }
+      .btn-primary, .btn-secondary { width: 100%; max-width: 320px; text-align: center; padding: 15px 24px; font-size: 16px; }
+      .hero-trust { gap: 14px; flex-direction: column; }
+
+      /* App preview */
+      .preview-wrap { padding: 0 16px 60px; }
+      .app-preview-inner { padding: 16px; }
+      .invoice-card { padding: 20px 16px; }
+      .inv-header { flex-direction: column; gap: 12px; }
+      .inv-meta { grid-template-columns: 1fr 1fr; gap: 12px; }
+      .inv-table th, .inv-table td { font-size: 12px; }
+      .inv-table td:nth-child(2), .inv-table th:nth-child(2) { display: none; }
+
+      /* Sections */
+      section { padding: 60px 20px; }
+      .section-title { font-size: 28px; letter-spacing: -0.5px; }
+      .section-sub { font-size: 16px; margin-bottom: 36px; }
+
+      /* Features */
+      .features-grid { grid-template-columns: 1fr; gap: 16px; }
+
+      /* How it works — stack columns */
+      .how-inner {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 36px !important;
+      }
+      .step { grid-template-columns: 52px 1fr; gap: 16px; padding: 24px 0; }
+      .step-content h3 { font-size: 17px; }
+      .step-content p { font-size: 15px; }
+
+      /* Swiss section */
+      .swiss-section { padding: 60px 20px; }
+      .swiss-inner { grid-template-columns: 1fr; gap: 40px; }
+      .swiss-inner h2 { font-size: 28px; }
+      .swiss-inner p { font-size: 16px; }
+      .swiss-stats { grid-template-columns: 1fr 1fr; gap: 16px; }
+      .stat-card { padding: 20px; }
+      .stat-num { font-size: 30px; }
+
+      /* Testimonials */
+      .testimonials-grid { grid-template-columns: 1fr; }
+
+      /* CTA */
+      .cta-section h2 { font-size: 28px; }
+      .cta-section p { font-size: 16px; }
+
+      /* Footer */
+      .footer-inner { flex-direction: column; text-align: center; gap: 8px; }
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 { font-size: 30px; }
+      .inv-meta { grid-template-columns: 1fr; }
+      .swiss-stats { grid-template-columns: 1fr; }
+      .swiss-pills { gap: 8px; }
+      .pill { font-size: 13px; padding: 8px 14px; }
     }
   </style>
 </head>
@@ -362,9 +441,8 @@
 <!-- NAV -->
 <nav style="top:41px;">
   <div class="nav-inner">
-    <a href="#" class="logo">
-      <div class="logo-icon">🧾</div>
-      <span class="logo-text">AlpBill</span>
+    <a href="#" class="logo" style="gap:0">
+      <img src="/logo-compact.svg" alt="AlpBill" height="40" style="display:block" />
     </a>
     <div class="nav-links">
       <a href="#features">Funktionen</a>
@@ -488,7 +566,7 @@
 
 <!-- HOW IT WORKS -->
 <section id="how">
-  <div class="section-inner" style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;">
+  <div class="section-inner how-inner" style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;">
     <div>
       <div class="section-label">So funktioniert's</div>
       <h2 class="section-title">In 3 Schritten zur Rechnung.</h2>
@@ -587,7 +665,7 @@
 
 <!-- CTA -->
 <section class="cta-section">
-  <div class="section-inner" style="text-align:center">
+  <div class="section-inner cta-inner" style="text-align:center">
     <div class="section-label">Jetzt starten</div>
     <h2 class="section-title">Bereit, Rechnungen zu vereinfachen?</h2>
     <p>Kostenlos starten — keine Kreditkarte, kein Abo, kein Risiko.</p>
@@ -598,7 +676,9 @@
 <!-- FOOTER -->
 <footer>
   <div class="footer-inner">
-    <div class="footer-logo">🧾 AlpBill</div>
+    <div class="footer-logo">
+      <img src="/logo-compact.svg" alt="AlpBill" height="32" style="display:block;filter:brightness(0) invert(1)" />
+    </div>
     <div class="footer-copy">
       © 2026 AlpBill · Schweizer Rechnungssoftware ·
       <a href="/impressum.html" style="color:inherit">Impressum</a> ·
